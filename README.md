@@ -17,33 +17,33 @@ A Claude Code plugin that transforms your workflow to use persistent markdown fi
 [![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-Skill-green)](https://code.claude.com/docs/en/skills)
 [![Cursor Skills](https://img.shields.io/badge/Cursor-Skills-purple)](https://docs.cursor.com/context/skills)
 [![Kilocode Skills](https://img.shields.io/badge/Kilocode-Skills-orange)](https://kilo.ai/docs/agent-behavior/skills)
-[![Version](https://img.shields.io/badge/version-2.5.0-brightgreen)](https://github.com/OthmanAdi/planning-with-files/releases)
+[![Version](https://img.shields.io/badge/version-2.6.0-brightgreen)](https://github.com/OthmanAdi/planning-with-files/releases)
 [![SkillCheck Validated](https://img.shields.io/badge/SkillCheck-Validated-4c1)](https://getskillcheck.com)
 
 ## Quick Install
 
 ```bash
-# 1. Install plugin
+# Install the plugin
 claude plugins install OthmanAdi/planning-with-files
+```
 
-# 2. Copy to skills folder for autocomplete (REQUIRED!)
+That's it! Now use `/planning-with-files:start` in Claude Code.
+
+**Alternative:** If you want `/planning-with-files` (without `:start`), copy skills to your local folder:
+
+```bash
+# Optional: Copy skills for /planning-with-files command
 cp -r ~/.claude/plugins/cache/planning-with-files/planning-with-files/*/skills/planning-with-files ~/.claude/skills/
-
-# 3. Restart Claude Code
 ```
 
 **Windows (PowerShell):**
 ```powershell
-# 1. Install plugin
+# Install the plugin
 claude plugins install OthmanAdi/planning-with-files
 
-# 2. Copy to skills folder for autocomplete
+# Optional: Copy skills for /planning-with-files command
 Copy-Item -Recurse -Path "$env:USERPROFILE\.claude\plugins\cache\planning-with-files\planning-with-files\*\skills\planning-with-files" -Destination "$env:USERPROFILE\.claude\skills\"
-
-# 3. Restart Claude Code
 ```
-
-Now type `/planning-with-files` in Claude Code!
 
 See [docs/installation.md](docs/installation.md) for all installation methods.
 
@@ -81,8 +81,9 @@ See [docs/installation.md](docs/installation.md) for all installation methods.
 
 | Version | Features | Install |
 |---------|----------|---------|
-| **v2.5.0** (current) | Fixed autocomplete - SKILL.md matches Anthropic format | `claude plugins install OthmanAdi/planning-with-files` |
-| **v2.3.0** | Codex & OpenCode IDE support | `/plugin install planning-with-files@planning-with-files` |
+| **v2.6.0** (current) | Start command (`/planning-with-files:start`), path resolution fix | `claude plugins install OthmanAdi/planning-with-files` |
+| **v2.5.0** | Fixed autocomplete - SKILL.md matches Anthropic format | See [releases](https://github.com/OthmanAdi/planning-with-files/releases) |
+| **v2.3.0** | Codex & OpenCode IDE support | See [releases](https://github.com/OthmanAdi/planning-with-files/releases) |
 | **v2.2.2** | Restored skill activation language | See [releases](https://github.com/OthmanAdi/planning-with-files/releases) |
 | **v2.2.1** | Session recovery after /clear, enhanced PreToolUse hook | See [releases](https://github.com/OthmanAdi/planning-with-files/releases) |
 | **v2.2.0** | Kilo Code IDE support, Windows PowerShell support, OS-aware hooks | See [releases](https://github.com/OthmanAdi/planning-with-files/releases) |
@@ -139,7 +140,7 @@ Once installed, Claude will automatically:
 5. **Log errors** for future reference
 6. **Verify completion** before stopping (via Stop hook)
 
-Or invoke manually with `/planning-with-files`.
+Or invoke manually with `/planning-with-files:start` (or `/planning-with-files` if you copied skills).
 
 See [docs/quickstart.md](docs/quickstart.md) for the full 5-step guide.
 
@@ -193,6 +194,8 @@ This lets you maximize context usage before manually clearing with `/clear`.
 
 ```
 planning-with-files/
+├── commands/                # Plugin commands
+│   └── start.md             # /planning-with-files:start command
 ├── templates/               # Root-level templates (for CLAUDE_PLUGIN_ROOT)
 ├── scripts/                 # Root-level scripts (for CLAUDE_PLUGIN_ROOT)
 ├── docs/                    # Documentation

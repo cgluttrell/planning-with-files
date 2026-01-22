@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.6.0] - 2026-01-22
+
+### Added
+
+- **Start Command** (PR #51 by @Guozihong)
+  - New `/planning-with-files:start` command for easier activation
+  - No longer requires copying skills to `~/.claude/skills/` folder
+  - Works directly after plugin installation
+  - Added `commands/start.md` file
+
+### Fixed
+
+- **Stop Hook Path Resolution** (PR #49 by @fahmyelraie)
+  - Fixed "No such file or directory" error when `CLAUDE_PLUGIN_ROOT` is not set
+  - Added fallback path: `$HOME/.claude/plugins/planning-with-files/scripts`
+  - Made `check-complete.sh` executable (chmod +x)
+  - Applied fix to all IDE-specific SKILL.md files (Codex, Cursor, Kilocode, OpenCode)
+
+### Thanks
+
+- @fahmyelraie for the path resolution fix (PR #49)
+- @Guozihong for the start command feature (PR #51)
+
+---
+
 ## [2.4.0] - 2026-01-20
 
 ### Fixed
