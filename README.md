@@ -21,7 +21,7 @@ A Claude Code plugin that transforms your workflow to use persistent markdown fi
 [![Moltbot](https://img.shields.io/badge/Moltbot-Skills-FF6B6B)](https://docs.molt.bot/tools/skills)
 [![Kiro](https://img.shields.io/badge/Kiro-Steering-00D4AA)](https://kiro.dev/docs/cli/steering/)
 [![AdaL CLI](https://img.shields.io/badge/AdaL%20CLI-Skills-9B59B6)](https://docs.sylph.ai/features/plugins-and-skills)
-[![Version](https://img.shields.io/badge/version-2.12.0-brightgreen)](https://github.com/OthmanAdi/planning-with-files/releases)
+[![Version](https://img.shields.io/badge/version-2.13.0-brightgreen)](https://github.com/OthmanAdi/planning-with-files/releases)
 [![SkillCheck Validated](https://img.shields.io/badge/SkillCheck-Validated-4c1)](https://getskillcheck.com)
 
 ## Quick Install
@@ -102,7 +102,8 @@ See [docs/installation.md](docs/installation.md) for all installation methods.
 
 | Version | Features | Install |
 |---------|----------|---------|
-| **v2.12.0** (current) | AdaL CLI / Sylph AI support | `claude plugins install OthmanAdi/planning-with-files` |
+| **v2.13.0** (current) | Moltbot rebrand (formerly Clawd CLI) | `claude plugins install OthmanAdi/planning-with-files` |
+| **v2.12.0** | AdaL CLI / Sylph AI support | See [releases](https://github.com/OthmanAdi/planning-with-files/releases) |
 | **v2.11.0** | `/plan` command for easier autocomplete | See [releases](https://github.com/OthmanAdi/planning-with-files/releases) |
 | **v2.10.0** | Kiro steering files support | See [releases](https://github.com/OthmanAdi/planning-with-files/releases) |
 | **v2.9.0** | Moltbot (formerly Clawd CLI) support | See [releases](https://github.com/OthmanAdi/planning-with-files/releases) |
